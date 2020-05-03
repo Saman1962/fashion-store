@@ -1,0 +1,9 @@
+[language.javascript]
+command = "C:\\Users\\majoh\\AppData\\Roaming\\npm\\flow.cmd"
+args = ["lsp"]
+install = [["npm", "install", "-g", "flow-bin"]]
+
+[language.css]
+command = "C:\\Users\\majoh\\AppData\\Roaming\\npm\\css-languageserver.cmd"
+args = ["--stdio"]
+install = [["npm", "install", "-g", "vscode-css-languageserver-bin"]]
