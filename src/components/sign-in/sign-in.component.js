@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 
 import FormInput from "../form-input/form-input.component";
 import CustomButton from "../custom-button/custom-button.component";
@@ -19,13 +19,13 @@ class SignIn extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
+
     console.log(e.target);
     this.setState({ email: "", password: "" });
   };
 
   handleChange = (e) => {
     const { value, name } = e.target;
-
     this.setState({ [name]: value });
   };
 
@@ -46,14 +46,14 @@ class SignIn extends React.Component {
             required
           />
           <FormInput
-            name="password"
-            type="password"
+            name="email"
+            type="email"
             value={this.state.password}
             handleChange={this.handleChange}
             label="password"
             required
           />
-          <div className="options">
+          <div className="buttons">
             <CustomButton type="submit">Sign in</CustomButton>
             <CustomButton onClick={signInWithGoogle} isGoogleSignIn>
               Sign in with Google
